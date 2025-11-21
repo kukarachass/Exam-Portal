@@ -1,5 +1,8 @@
 import { createBrowserRouter } from "react-router-dom"
 import App from "../App.tsx";
+import StudentLayout from "../layouts/StudentLayout/StudentLayout.tsx";
+import LecturerLayout from "../layouts/LecturerLayout/LecturerLayout.tsx";
+import AdminLayout from "../layouts/AdminLayout/AdminLayout.tsx";
 
 const router = createBrowserRouter([
     {
@@ -8,11 +11,11 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "student-portal/*",
-                element: <></>,
+                element: <StudentLayout/>,
             },
             {
                 path: "lecturer-dashboard/*",
-                element: <></>,
+                element: <LecturerLayout/>,
                 children: [
                     { path: "create-exam", element: <></>},
                     { path: "review-exams", element: <></>},
@@ -21,7 +24,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "admin-panel/*",
-                element: <></>,
+                element: <AdminLayout/>,
                 children: [
                     { path: "manage-users", element: <></> },
                     { path: "manage-exams", element: <></> },
@@ -30,7 +33,6 @@ const router = createBrowserRouter([
                     { path: "security-alerts", element: <></> },
                     { path: "audit-reports", element: <></> },
                     { path: "usage-analytics", element: <></> },
-                    { path: "user-management", element: <></> },
                 ]
             }
 
