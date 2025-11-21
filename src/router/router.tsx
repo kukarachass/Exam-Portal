@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom"
 import App from "../App.tsx";
-import StudentLayout from "../layouts/StudentLayout/StudentLayout.tsx";
 import LecturerLayout from "../layouts/LecturerLayout/LecturerLayout.tsx";
 import AdminLayout from "../layouts/AdminLayout/AdminLayout.tsx";
 import CreateExamPage from "../pages/LecturerPages/CreateExamPage/CreateExamPage.tsx";
@@ -13,6 +12,7 @@ import MonitoringPage from "../pages/AdminPages/MonitoringPage/MonitoringPage.ts
 import SecurityAlertsPage from "../pages/AdminPages/SecurityAlertsPage/SecurityAlertsPage.tsx";
 import AuditReportsPage from "../pages/AdminPages/AuditReportsPage/AuditReportsPage.tsx";
 import UsageAnalyticsPage from "../pages/AdminPages/UsageAnalyticsPage/UsageAnalyticsPage.tsx";
+import StudentPage from "../pages/StudentPage/StudentPage.tsx";
 
 const router = createBrowserRouter([
     {
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "student-portal/*",
-                element: <StudentLayout/>,
+                element: <StudentPage/>,
             },
             {
                 path: "lecturer-dashboard/*",
