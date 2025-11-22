@@ -30,6 +30,9 @@ export default function LoginPage() {
 
     return (
         <div className={styles.container}>
+            <div>
+                <Link to="/">Back to Main Page</Link>
+            </div>
             <form action="" onSubmit={handleSubmit}>
                 <label htmlFor="email">Email:</label>
                 <input
@@ -46,9 +49,6 @@ export default function LoginPage() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-
-                <span>Don't have an account? <Link to={"/auth/registration"}>Register here</Link></span>
-
                 <button
                     type="submit"
                 >
