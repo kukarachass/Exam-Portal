@@ -10,6 +10,7 @@ export default function HomePage(){
                         Student Portal
                     </div>
                 </Link>
+
                 <Link to={"/auth/login"}>
                     <div className={styles.lecturer}>
                         Lecturer Dashboard
