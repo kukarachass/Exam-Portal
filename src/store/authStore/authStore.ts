@@ -1,7 +1,7 @@
 import type {IUser} from "../../interfaces/IUser.ts";
 import { create } from "zustand";
-import { persist } from "zustand/middleware/persist";
-import {getMeApi, loginApi, registerApi} from "../../api/auth.api.ts";
+import { persist } from "zustand/middleware";
+import { getMeApi, loginApi, registerApi } from "../../api/auth.api.ts";
 
 interface AuthState {
     user: IUser | null;
