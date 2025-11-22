@@ -4,7 +4,13 @@ import {Outlet} from "react-router-dom";
 function App() {
   return (
     <div className={styles.app}>
+        <header>
+            header
+        </header>
         <Outlet/>
+        <footer>
+            footer
+        </footer>
     </div>
   )
 }

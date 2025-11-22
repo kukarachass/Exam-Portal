@@ -1,5 +1,4 @@
-import { createBrowserRouter } from "react-router-dom"
-import App from "../App.tsx";
+import {createBrowserRouter} from "react-router-dom"
 import LecturerLayout from "../layouts/LecturerLayout/LecturerLayout.tsx";
 import AdminLayout from "../layouts/AdminLayout/AdminLayout.tsx";
 import CreateExamPage from "../pages/LecturerPages/CreateExamPage/CreateExamPage.tsx";
@@ -13,6 +12,9 @@ import SecurityAlertsPage from "../pages/AdminPages/SecurityAlertsPage/SecurityA
 import AuditReportsPage from "../pages/AdminPages/AuditReportsPage/AuditReportsPage.tsx";
 import UsageAnalyticsPage from "../pages/AdminPages/UsageAnalyticsPage/UsageAnalyticsPage.tsx";
 import StudentPage from "../pages/StudentPage/StudentPage.tsx";
+import HomePage from "../pages/HomePage/HomePage.tsx";
+import App from "../App.tsx";
+import LoginPage from "../pages/AuthPages/LoginPage/LoginPage.tsx";
 
 const router = createBrowserRouter([
     {
@@ -20,29 +22,38 @@ const router = createBrowserRouter([
         element: <App/>,
         children: [
             {
-                path: "student-portal/*",
+                path: "",
+                element: <HomePage/>
+            },
+            {
+                path: "/login",
+                element: <LoginPage/>
+            },
+
+            {
+                path: "student-portal",
                 element: <StudentPage/>,
             },
             {
-                path: "lecturer-dashboard/*",
+                path: "lecturer-dashboard",
                 element: <LecturerLayout/>,
                 children: [
-                    { path: "create-exam", element: <CreateExamPage/>},
-                    { path: "review-exams", element: <ReviewExamsPage/>},
-                    { path: "manage-sessions", element: <ManageSessionsPage/>},
+                    {path: "create-exam", element: <CreateExamPage/>},
+                    {path: "review-exams", element: <ReviewExamsPage/>},
+                    {path: "manage-sessions", element: <ManageSessionsPage/>},
                 ]
             },
             {
-                path: "admin-panel/*",
+                path: "admin-panel",
                 element: <AdminLayout/>,
                 children: [
-                    { path: "manage-users", element: <ManageUsersPage/> },
-                    { path: "manage-exams", element: <ManageExamsPage/> },
-                    { path: "view-systemLogs", element: <ViewSystemLogs/> },
-                    { path: "monitoring", element: <MonitoringPage/> },
-                    { path: "security-alerts", element: <SecurityAlertsPage/> },
-                    { path: "audit-reports", element: <AuditReportsPage/> },
-                    { path: "usage-analytics", element: <UsageAnalyticsPage/> },
+                    {path: "manage-users", element: <ManageUsersPage/>},
+                    {path: "manage-exams", element: <ManageExamsPage/>},
+                    {path: "view-systemLogs", element: <ViewSystemLogs/>},
+                    {path: "monitoring", element: <MonitoringPage/>},
+                    {path: "security-alerts", element: <SecurityAlertsPage/>},
+                    {path: "audit-reports", element: <AuditReportsPage/>},
+                    {path: "usage-analytics", element: <UsageAnalyticsPage/>},
                 ]
             }
 
