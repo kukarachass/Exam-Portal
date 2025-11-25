@@ -1,0 +1,49 @@
+.studentWrapper{
+    max-width: 270px;
+    background: var(--student-card-bg);
+    padding: 2rem;
+    border-radius: .6rem;
+    border: var(--card-border);
+    transition: all ease-in-out 0.2s;
+}
+
+.studentWrapper:hover{
+    transform: scale(1.01);
+}
+.student{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.iconWrapper{
+    background: var(--primary);
+    padding: 16px 16px 0px;
+    border-radius: 9999rem;
+    width: 64px;
+    height: 64px;
+
+}
+
+.studentContent{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+}
+
+.mutedText{
+    color: var(--muted-text)
+}
+
+.title{
+    color: var(--text);
+}
+
+.access{
+    background-color: #dbeafe;
+    padding: 0.3rem;
+    border-radius: 6px;
+    color:  #193cb8;
+}

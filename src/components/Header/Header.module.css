@@ -1,0 +1,48 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--header);
+    border-bottom: var(--header-bottom-border);
+    box-shadow: var(--header-shadow);
+    padding: 1.5rem;
+    align-items: center;
+}
+.leftSide{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+.logoWrapper{
+    display: flex;
+    background-color: var(--primary);
+    border-radius: .7rem;
+    padding: .5rem;
+
+}
+.logo {
+    width: 32px;
+    height: 32px;
+}
+
+.title{
+    color: var(--text);
+}
+.name{
+    color: var(--secondary);
+}
+
+.headerYear{
+
+}
+
+.acadYear{
+    display: inline-block;
+    border: 1px solid var(--header-btn);
+    width: fit-content;
+    padding: .5rem;
+    border-radius: .7rem;
+    color: var(--secondary);
+    font-size: .9rem;
+}

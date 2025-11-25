@@ -14,8 +14,8 @@ import UsageAnalyticsPage from "../pages/AdminPages/UsageAnalyticsPage/UsageAnal
 import StudentPage from "../pages/StudentPage/StudentPage.tsx";
 import HomePage from "../pages/HomePage/HomePage.tsx";
 import App from "../App.tsx";
-import LoginPage from "../pages/AuthPages/LoginPage/LoginPage.tsx";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute.tsx";
+import LoginForm from "../components/AuthForms/LoginForm/LoginForm.tsx";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/auth/login",
-                element: <LoginPage/>
+                element: <LoginForm/>
             },
 
             {
