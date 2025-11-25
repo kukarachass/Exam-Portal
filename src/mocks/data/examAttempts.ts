@@ -1,4 +1,4 @@
-export interface IExamAttempt {
+export  interface IExamAttempt {
     id: number;
     examId: number;
     studentId: number;
