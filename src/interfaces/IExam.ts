@@ -8,8 +8,8 @@ export interface IExam {
     title: string;
     subject: string;
     lecturerId: number;
+    status: "scheduled" | "completed" | "active";
     date: string;
     durationMinutes: number;
     questions: IQuestion[];
-    grade: number;
 }
