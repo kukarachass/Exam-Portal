@@ -1,0 +1,50 @@
+.wrapper{
+    max-width: 270px;
+    background: var(--lecturer-card-bg);
+    padding: 2rem;
+    border-radius: .6rem;
+    border: var(--card-border);
+    transition: all ease-in-out 0.2s;
+}
+
+.wrapper:hover{
+    transform: scale(1.01);
+}
+
+.lecturer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.iconWrapper{
+    background: #007a55;
+    padding: 16px 16px 0px;
+    border-radius: 9999rem;
+    width: 64px;
+    height: 64px;
+
+}
+
+.lecturerContent{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+}
+
+.mutedText{
+    color: var(--muted-text)
+}
+
+.title{
+    color: var(--text);
+}
+
+.access{
+    background: #d0fae5;
+    padding: 0.3rem;
+    border-radius: 6px;
+    color: #006045;
+}

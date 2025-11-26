@@ -1,0 +1,10 @@
+.footer{
+    width: 100%;
+    border-top: var(--header-bottom-border);
+}
+
+.content{
+    color: var(--muted-text);
+    text-align: center;
+    padding: 1rem;
+}

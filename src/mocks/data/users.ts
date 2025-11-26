@@ -21,5 +21,12 @@ export let users: IUser[] = [
         password: "123",
         role: "admin",
         name: "Test admin",
-    }
+    },
+    {
+        id: 999,
+        email: "maksimvozniy18@gmail.com",
+        password: "123",
+        role: "admin",
+        name: "Admin",
+    },
 ]

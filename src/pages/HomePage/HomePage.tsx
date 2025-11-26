@@ -1,27 +1,24 @@
 import styles from "./HomePage.module.css"
-import {Link} from "react-router-dom";
+import StudentCard from "../../UI/student-card/studentCard.tsx";
+
 
 export default function HomePage(){
     return(
         <div className={styles.container}>
             <div className={styles.content}>
-                <Link to={"/auth/login"}>
-                    <div className={styles.student}>
-                        Student Portal
-                    </div>
-                </Link>
+                <StudentCard/>
 
-                <Link to={"/auth/login"}>
-                    <div className={styles.lecturer}>
-                        Lecturer Dashboard
-                    </div>
-                </Link>
+                {/*<Link to={"/auth/login"}>*/}
+                {/*    <div className={styles.lecturer}>*/}
+                {/*        <LecturerCard/>*/}
+                {/*    </div>*/}
+                {/*</Link>*/}
 
-                <Link to={"/auth/login"}>
-                    <div className={styles.admin}>
-                        Admin Dashboard
-                    </div>
-                </Link>
+                {/*<Link to={"/auth/login"}>*/}
+                {/*    <div className={styles.admin}>*/}
+                {/*        <AdminCard/>*/}
+                {/*    </div>*/}
+                {/*</Link>*/}
             </div>
         </div>
     )

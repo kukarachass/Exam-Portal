@@ -14,7 +14,6 @@ import UsageAnalyticsPage from "../pages/AdminPages/UsageAnalyticsPage/UsageAnal
 import StudentPage from "../pages/StudentPage/StudentPage.tsx";
 import HomePage from "../pages/HomePage/HomePage.tsx";
 import App from "../App.tsx";
-import LoginPage from "../pages/AuthPages/LoginPage/LoginPage.tsx";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute.tsx";
 
 const router = createBrowserRouter([
@@ -27,17 +26,16 @@ const router = createBrowserRouter([
                 element: <HomePage/>
             },
             {
-                path: "/auth/login",
-                element: <LoginPage/>
-            },
-
-            {
                 path: "student-portal",
                 element: (
                     <ProtectedRoute allowedRoles={["student"]}>
                         <StudentPage/>
                     </ProtectedRoute>
                 ),
+            },
+            {
+              path: "/admin-panel",
+              element: <>Admin panel</>
             },
             {
                 path: "lecturer-dashboard",
