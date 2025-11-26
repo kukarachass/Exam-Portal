@@ -15,7 +15,6 @@ import StudentPage from "../pages/StudentPage/StudentPage.tsx";
 import HomePage from "../pages/HomePage/HomePage.tsx";
 import App from "../App.tsx";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute.tsx";
-import LoginForm from "../components/AuthForms/LoginForm/LoginForm.tsx";
 
 const router = createBrowserRouter([
     {
@@ -27,17 +26,16 @@ const router = createBrowserRouter([
                 element: <HomePage/>
             },
             {
-                path: "/auth/login",
-                element: <LoginForm/>
-            },
-
-            {
                 path: "student-portal",
                 element: (
                     <ProtectedRoute allowedRoles={["student"]}>
                         <StudentPage/>
                     </ProtectedRoute>
                 ),
+            },
+            {
+              path: "/admin-panel",
+              element: <>Admin panel</>
             },
             {
                 path: "lecturer-dashboard",

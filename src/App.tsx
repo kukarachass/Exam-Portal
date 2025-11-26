@@ -1,6 +1,7 @@
 import styles from './App.module.css'
 import {Outlet} from "react-router-dom";
 import Header from "./components/Header/Header.tsx";
+import Footer from "./components/Footer/Footer.tsx";
 
 function App() {
     return (
@@ -12,7 +13,7 @@ function App() {
                 <Outlet/>
             </main>
             <footer className={styles.footer}>
-                footer
+                <Footer/>
             </footer>
         </div>
     )

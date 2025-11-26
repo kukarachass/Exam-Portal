@@ -1,15 +1,13 @@
 .studentWrapper{
-    max-width: 270px;
-    background: var(--student-card-bg);
+    max-width: 420px;
+    box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.1), 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    background: #fff;
     padding: 2rem;
     border-radius: .6rem;
     border: var(--card-border);
-    transition: all ease-in-out 0.2s;
 }
 
-.studentWrapper:hover{
-    transform: scale(1.01);
-}
+
 .student{
     display: flex;
     flex-direction: column;
@@ -42,8 +40,20 @@
 }
 
 .access{
-    background-color: #dbeafe;
     padding: 0.3rem;
     border-radius: 6px;
     color:  #193cb8;
 }
+
+.form{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+

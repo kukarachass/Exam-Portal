@@ -11,7 +11,7 @@ interface AuthState {
 }
 
 interface AuthActions {
-    login: (email: string, password: string) => Promise<void>;
+    login: (email: string, password: string) => Promise<{ success: boolean; error?: string }>;
     register: (email: string, password: string, name: string) => Promise<void>;
     getMe: () => Promise<void>;
     logout: () => Promise<void>;
@@ -36,12 +36,13 @@ export const useAuthStore = create<AuthStore>()(
                         token: res.token,
                         isLoading: false,
                     })
+
+                    return { success: true };
                 }catch (e: unknown) {
-                    if (e instanceof Error) {
-                        set({ error: e.message });
-                    } else {
-                        set({ error: "Unknown error" });
-                    }
+                    let message = "Unknown error";
+                    if (e instanceof Error) message = e.message;
+                    set({ error: message, isLoading: false });
+                    return { success: false, error: message };
                 }
             },
 
