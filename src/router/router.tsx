@@ -35,7 +35,7 @@ const router = createBrowserRouter([
             },
             {
               path: "/admin-panel",
-              element: <>Admin panel</>
+              element: <AdminLayout/>
             },
             {
                 path: "lecturer-dashboard",
