@@ -9,7 +9,7 @@ interface IGradeResponse {
 }
 
 export async function getAllExams(): Promise<IExam[]> {
-    const res = await axios.get("/exams");
+    const res = await axios.get("exam/all-exams");
     return res.data;
 }
 
