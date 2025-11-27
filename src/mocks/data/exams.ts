@@ -6,7 +6,9 @@ export const exams: IExam[] = [
         title: "Math Final Exam",
         subject: "Mathematics",
         lecturerId: 101,
+        lecturerName: "Kristina Shvets",
         date: "2025-02-10",
+        audience: "202B",
         durationMinutes: 60,
         status: "scheduled",
         questions: [
