@@ -1,0 +1,72 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: var(--admin-border);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.title{
+    color: var(--text)
+}
+
+.lightGreen{
+    background-color: var(--light-green);
+    padding: 2px 8px;
+    border-radius: 1rem;
+    font-size: 12px;
+    color: #016630;
+}
+
+.cardsWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--admin-card-bg);
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid lightgrey;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.01);
+}
+
+.examStatus{
+    padding: 2px 8px;
+    border-radius: 1rem;
+    color: white;
+    font-size: .8rem;
+}
+
+.muted{
+    color: var(--muted-text);
+}
+
+.active{
+    background-color: var(--primary);
+}
+.scheduled{
+    background-color: var(--primary-blue);
+}
+.completed{
+    background-color: var(--primary-orange);
+}
+
