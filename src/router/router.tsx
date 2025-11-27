@@ -11,55 +11,57 @@ import AuditReportsPage from "../pages/AdminPages/AuditReportsPage/AuditReportsP
 import UsageAnalyticsPage from "../pages/AdminPages/UsageAnalyticsPage/UsageAnalyticsPage.tsx";
 import StudentPage from "../pages/StudentPage/StudentPage.tsx";
 import HomePage from "../pages/HomePage/HomePage.tsx";
-import App from "../App.tsx";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute.tsx";
 import AdminPage from "../pages/AdminPages/AdminPage/AdminPage.tsx";
+import MainLayout from "../layouts/MainLayout/MainLayout.tsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App/>,
+        element: <MainLayout/>,
         children: [
             {
                 path: "",
                 element: <HomePage/>
             },
-            {
-                path: "student-portal",
-                element: (
-                    <ProtectedRoute allowedRoles={["student"]}>
-                        <StudentPage/>
-                    </ProtectedRoute>
-                ),
-            },
-            {
-                path: "lecturer-dashboard",
-                element: (
-                    <ProtectedRoute allowedRoles={["lecturer"]}>
-                        <>Lecturer page</>
-                    </ProtectedRoute>
-                )
-            },
-            {path: "create-exam", element: <CreateExamPage/>},
-            {path: "review-exams", element: <ReviewExamsPage/>},
-            {path: "manage-sessions", element: <ManageSessionsPage/>},
-            {
-                path: "admin-panel",
-                element: (
-                    <ProtectedRoute allowedRoles={["admin"]}>
-                        <AdminPage/>
-                    </ProtectedRoute>
-                )
-            },
-            {path: "manage-users", element: <ManageUsersPage/>},
-            {path: "manage-exams", element: <ManageExamsPage/>},
-            {path: "view-systemLogs", element: <ViewSystemLogs/>},
-            {path: "monitoring", element: <MonitoringPage/>},
-            {path: "security-alerts", element: <SecurityAlertsPage/>},
-            {path: "audit-reports", element: <AuditReportsPage/>},
-            {path: "usage-analytics", element: <UsageAnalyticsPage/>},
         ]
-    }
+    },
+
+    {
+        path: "student-portal",
+        element: (
+            <ProtectedRoute allowedRoles={["student"]}>
+                <StudentPage/>
+            </ProtectedRoute>
+        ),
+    },
+
+    {
+        path: "lecturer-dashboard",
+        element: (
+            <ProtectedRoute allowedRoles={["lecturer"]}>
+                <>Lecturer page</>
+            </ProtectedRoute>
+        )
+    },
+    {path: "create-exam", element: <CreateExamPage/>},
+    {path: "review-exams", element: <ReviewExamsPage/>},
+    {path: "manage-sessions", element: <ManageSessionsPage/>},
+    {
+        path: "admin-panel",
+        element: (
+            <ProtectedRoute allowedRoles={["admin"]}>
+                <AdminPage/>
+            </ProtectedRoute>
+        )
+    },
+    {path: "manage-users", element: <ManageUsersPage/>},
+    {path: "manage-exams", element: <ManageExamsPage/>},
+    {path: "view-systemLogs", element: <ViewSystemLogs/>},
+    {path: "monitoring", element: <MonitoringPage/>},
+    {path: "security-alerts", element: <SecurityAlertsPage/>},
+    {path: "audit-reports", element: <AuditReportsPage/>},
+    {path: "usage-analytics", element: <UsageAnalyticsPage/>},
 ])
 
 export default router;

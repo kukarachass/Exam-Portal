@@ -17,8 +17,6 @@ export default function StudentCard() {
                 <div className={styles.form}>
                     <LoginForm/>
                 </div>
-
-
             </div>
         </div>
     )
