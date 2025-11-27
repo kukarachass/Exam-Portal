@@ -18,10 +18,3 @@
 .footer {
     height: 60px; /* твоя высота */
 }
-
-.main {
-    flex: 1;
-    display: flex;
-    justify-content: center;   /* центр по горизонтали */
-    align-items: center;        /* центр по вертикали */
-}

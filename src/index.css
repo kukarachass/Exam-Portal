@@ -4,6 +4,7 @@
     --text: #101828;
     --muted-text: #4a5565;
     --primary: #007a55;
+    --primary-purple: #9810fa;
     --primary-hover: #01835a;
     --secondary: #096;
     --header-btn: #077355;
@@ -11,9 +12,16 @@
     --header: #fff;
     --header-bottom-border: 1px solid rgba(0, 0, 0, 0.1);
     --card-border: 2px solid rgba(0, 0, 0, 0.1);;
-    --student-card-bg: linear-gradient(135deg, #eff6ff 0%, #fff 100%);;
-    --lecturer-card-bg: linear-gradient(135deg, #ecfdf5 0%, #fff 100%);
-    --admin-card-bg: linear-gradient(135deg, #faf5ff 0%, #fff 100%);
+    --student-card-bg: linear-gradient(135deg, #eff6ff 0%, #fff 100%);
+
+    --admin-header: linear-gradient(90deg, #faf5ff 0%, #eef2ff 100%);
+    --light-green: #dcfce7;
+    --ligth-blue: #dbeafe;
+    --light-purple: #f3e8ff;
+    --light-orange: #fef9c2;
+    --light-red: #ffe2e2;
+    --admin-border: 1px solid rgba(0, 0, 0, 0.1);
+    --admin-card-bg: #f9fafb;
 }
 
 *{

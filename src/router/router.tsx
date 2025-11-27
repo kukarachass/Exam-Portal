@@ -1,6 +1,4 @@
 import {createBrowserRouter} from "react-router-dom"
-import LecturerLayout from "../layouts/LecturerLayout/LecturerLayout.tsx";
-import AdminLayout from "../layouts/AdminLayout/AdminLayout.tsx";
 import CreateExamPage from "../pages/LecturerPages/CreateExamPage/CreateExamPage.tsx";
 import ReviewExamsPage from "../pages/LecturerPages/ReviewExamsPage/ReviewExamsPage.tsx";
 import ManageSessionsPage from "../pages/LecturerPages/ManageSessionsPage/ManageSessionsPage.tsx";
@@ -15,6 +13,7 @@ import StudentPage from "../pages/StudentPage/StudentPage.tsx";
 import HomePage from "../pages/HomePage/HomePage.tsx";
 import App from "../App.tsx";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute.tsx";
+import AdminPage from "../pages/AdminPages/AdminPage/AdminPage.tsx";
 
 const router = createBrowserRouter([
     {
@@ -34,40 +33,31 @@ const router = createBrowserRouter([
                 ),
             },
             {
-              path: "/admin-panel",
-              element: <AdminLayout/>
-            },
-            {
                 path: "lecturer-dashboard",
                 element: (
                     <ProtectedRoute allowedRoles={["lecturer"]}>
-                        <LecturerLayout/>
+                        <>Lecturer page</>
                     </ProtectedRoute>
-                ),
-                children: [
-                    {path: "create-exam", element: <CreateExamPage/>},
-                    {path: "review-exams", element: <ReviewExamsPage/>},
-                    {path: "manage-sessions", element: <ManageSessionsPage/>},
-                ]
+                )
             },
+            {path: "create-exam", element: <CreateExamPage/>},
+            {path: "review-exams", element: <ReviewExamsPage/>},
+            {path: "manage-sessions", element: <ManageSessionsPage/>},
             {
                 path: "admin-panel",
                 element: (
                     <ProtectedRoute allowedRoles={["admin"]}>
-                        <AdminLayout/>
+                        <AdminPage/>
                     </ProtectedRoute>
-                ),
-                children: [
-                    {path: "manage-users", element: <ManageUsersPage/>},
-                    {path: "manage-exams", element: <ManageExamsPage/>},
-                    {path: "view-systemLogs", element: <ViewSystemLogs/>},
-                    {path: "monitoring", element: <MonitoringPage/>},
-                    {path: "security-alerts", element: <SecurityAlertsPage/>},
-                    {path: "audit-reports", element: <AuditReportsPage/>},
-                    {path: "usage-analytics", element: <UsageAnalyticsPage/>},
-                ]
-            }
-
+                )
+            },
+            {path: "manage-users", element: <ManageUsersPage/>},
+            {path: "manage-exams", element: <ManageExamsPage/>},
+            {path: "view-systemLogs", element: <ViewSystemLogs/>},
+            {path: "monitoring", element: <MonitoringPage/>},
+            {path: "security-alerts", element: <SecurityAlertsPage/>},
+            {path: "audit-reports", element: <AuditReportsPage/>},
+            {path: "usage-analytics", element: <UsageAnalyticsPage/>},
         ]
     }
 ])

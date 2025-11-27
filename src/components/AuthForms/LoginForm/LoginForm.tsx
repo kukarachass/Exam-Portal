@@ -38,7 +38,7 @@ export default function LoginForm() {
             <form className={styles.form} action="" onSubmit={handleSubmit}>
                 {!isSuccess &&  (
                     <div className={styles.errorMessage}>
-                        Invalid username or password
+                        Invalid email or password
                     </div>
                 )}
 
