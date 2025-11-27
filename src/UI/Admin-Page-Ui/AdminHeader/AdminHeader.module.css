@@ -1,0 +1,47 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: var(--admin-header);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: var(--admin-border);
+}
+
+.leftSide{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logoWrapper{
+    background: var(--light-purple);
+    border-radius: 9999rem;
+    padding: .7rem;
+}
+
+.adminInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.mutedBig{
+    color: var(--muted-text);
+    font-size: 1.1rem;
+}
+
+.mutedSmall{
+    color: var(--muted-text);
+    font-size: 1rem;
+}
+
+.logoutLink{
+    background: var(--light-purple);
+    width: fit-content;
+    display: inline-block;
+    padding: .5rem;
+    border: var(--admin-border);
+    border-radius: .5rem;
+    font-weight: bold;
+}

@@ -3,8 +3,14 @@
     --bg-gradient: linear-gradient(135deg, #ecfdf5 0%, #fff 50%, #f8fafc 100%);
     --text: #101828;
     --muted-text: #4a5565;
+
+
     --primary: #007a55;
     --primary-purple: #9810fa;
+    --primary-blue: #155dfc;
+    --primary-orange: #d08700;
+
+
     --primary-hover: #01835a;
     --secondary: #096;
     --header-btn: #077355;

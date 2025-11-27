@@ -27,6 +27,6 @@ export let users: IUser[] = [
         email: "maksimvozniy18@gmail.com",
         password: "123",
         role: "admin",
-        name: "Admin",
+        name: "Maksim",
     },
 ]

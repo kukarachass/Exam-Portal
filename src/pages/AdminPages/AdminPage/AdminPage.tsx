@@ -1,5 +1,6 @@
 import styles from "./AdminPage.module.css"
 import AdminHeader from "../../../UI/Admin-Page-Ui/AdminHeader/AdminHeader.tsx";
+import ActivityBord from "../../../UI/Admin-Page-Ui/Activity-bord/ActivityBord.tsx";
 
 export default function AdminPage(){
     return(
@@ -9,7 +10,7 @@ export default function AdminPage(){
             </header>
 
             <div className={styles.hero}>
-
+                <ActivityBord/>
             </div>
 
             <div className={styles.examSessions}>

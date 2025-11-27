@@ -3,9 +3,9 @@ import {useAuthStore} from "../../../store/authStore/authStore.ts";
 import {Link} from "react-router-dom";
 
 
-export default function AdminHeader(){
+export default function AdminHeader() {
     const user = useAuthStore((state) => state.user);
-    return(
+    return (
         <div className={styles.header}>
             <div className={styles.leftSide}>
                 <div className={styles.logoWrapper}>
@@ -14,11 +14,14 @@ export default function AdminHeader(){
                 <div className={styles.adminInfo}>
                     <h3 className={styles.title}>System Administrator</h3>
                     <span className={styles.mutedBig}>{user?.name}</span>
-                    <span className={styles.smallMuted}>{user?.email}</span>
+                    <span className={styles.mutedSmall}>{user?.email}</span>
                 </div>
             </div>
-
-            <Link className={styles.logoutLink} to={"/"}>Log out</Link>
+            <Link to={"/"}>
+                <div className={styles.logoutLink}>
+                    Log out
+                </div>
+            </Link>
         </div>
     )
 }
