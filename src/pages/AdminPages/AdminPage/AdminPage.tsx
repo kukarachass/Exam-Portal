@@ -2,6 +2,7 @@ import styles from "./AdminPage.module.css"
 import AdminHeader from "../../../UI/Admin-Page-Ui/AdminHeader/AdminHeader.tsx";
 import ActivityBord from "../../../UI/Admin-Page-Ui/Activity-bord/ActivityBord.tsx";
 import ExamSessions from "../../../UI/Admin-Page-Ui/ExamSessions/ExamSessions.tsx";
+import ManageCards from "../../../UI/Admin-Page-Ui/ManageCards/ManageCards.tsx";
 
 export default function AdminPage(){
     return(
@@ -19,7 +20,7 @@ export default function AdminPage(){
             </div>
 
             <div className={styles.management}>
-
+                <ManageCards/>
             </div>
 
             <div className={styles.logs}>

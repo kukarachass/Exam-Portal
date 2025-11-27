@@ -1,0 +1,60 @@
+.wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(517px, 1fr));
+    gap: 1rem;
+}
+
+.manageCard{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: var(--admin-border);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* базовая лёгкая тень */
+}
+
+.manageCard:hover {
+    transform: translateY(-2px); /* лёгкий подъём */
+    box-shadow:
+            0 4px 12px rgba(0,0,0,0.08),
+            0 1px 30px rgba(0,0,0,0.04); /* мягкий рассеянный glow */
+}
+
+.leftSide{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .8rem;
+}
+
+.iconWrapper{
+    border-radius: 9999rem;
+    padding: 1rem;
+}
+
+.cardInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.bigText{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--text)
+}
+
+.muted{
+    color: var(--muted-text)
+}
+
+
+.lightBlue{
+    background-color: var(--ligth-blue);
+}
+.lightGreen{
+    background-color: var(--light-green);
+}
