@@ -5,7 +5,7 @@ import cn from "classnames";
 export default function ManageCards (){
     return(
         <div className={styles.wrapper}>
-            <Link to="/">
+            <Link to="manage-users">
                 <div className={styles.manageCard}>
                     <div className={styles.leftSide}>
                         <div className={cn(styles.iconWrapper, styles.lightBlue)}>
@@ -23,7 +23,7 @@ export default function ManageCards (){
                 </div>
             </Link>
 
-            <Link to="/">
+            <Link to="manage-exams">
                 <div className={styles.manageCard}>
                     <div className={styles.leftSide}>
                         <div className={cn(styles.iconWrapper, styles.lightGreen)}>

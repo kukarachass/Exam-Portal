@@ -14,8 +14,13 @@ import HomePage from "../pages/HomePage/HomePage.tsx";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute.tsx";
 import AdminPage from "../pages/AdminPages/AdminPage/AdminPage.tsx";
 import MainLayout from "../layouts/MainLayout/MainLayout.tsx";
+import StudentLayout from "../layouts/StudentLayout/StudentLayout.tsx";
+import LecturerLayout from "../layouts/LecturerLayout/LecturerLayout.tsx";
+import AdminLayout from "../layouts/AdminLayout/AdminLayout.tsx";
+import LecturerPage from "../pages/LecturerPages/LecturerPage/LecturerPage.tsx";
 
 const router = createBrowserRouter([
+    // ---- MAIN LAYOUT ----
     {
         path: "/",
         element: <MainLayout/>,
@@ -27,41 +32,54 @@ const router = createBrowserRouter([
         ]
     },
 
+    // ---- USER ----
     {
-        path: "student-portal",
+        path: "/student-portal",
         element: (
             <ProtectedRoute allowedRoles={["student"]}>
-                <StudentPage/>
+                <StudentLayout/>
             </ProtectedRoute>
         ),
+        children: [
+            { path: "", element: <StudentPage/>}
+        ]
     },
 
+    // ----LECTURER DASHBOARD----
     {
-        path: "lecturer-dashboard",
+        path: "/lecturer-dashboard",
         element: (
             <ProtectedRoute allowedRoles={["lecturer"]}>
-                <>Lecturer page</>
+                <LecturerLayout/>
             </ProtectedRoute>
-        )
+        ),
+        children: [
+            { path: "", element: <LecturerPage/>},
+            { path: "create-exam", element: <CreateExamPage/> },
+            { path: "review-exams", element: <ReviewExamsPage/>},
+            { path: "manage-sessions", element: <ManageSessionsPage/>}
+        ]
     },
-    {path: "create-exam", element: <CreateExamPage/>},
-    {path: "review-exams", element: <ReviewExamsPage/>},
-    {path: "manage-sessions", element: <ManageSessionsPage/>},
+
+    // ----ADMIN PANEL----
     {
-        path: "admin-panel",
+        path: "/admin-panel",
         element: (
             <ProtectedRoute allowedRoles={["admin"]}>
-                <AdminPage/>
+                <AdminLayout/>
             </ProtectedRoute>
-        )
+        ),
+        children: [
+            { path: "", element: <AdminPage/>},
+            { path: "manage-users", element: <ManageUsersPage/> },
+            { path: "manage-exams", element: <ManageExamsPage/> },
+            { path: "view-systemLogs", element: <ViewSystemLogs/> },
+            { path: "monitoring", element: <MonitoringPage/> },
+            { path: "security-alerts", element: <SecurityAlertsPage/> },
+            { path: "audit-reports", element: <AuditReportsPage/> },
+            { path: "usage-analytics", element: <UsageAnalyticsPage/> },
+        ]
     },
-    {path: "manage-users", element: <ManageUsersPage/>},
-    {path: "manage-exams", element: <ManageExamsPage/>},
-    {path: "view-systemLogs", element: <ViewSystemLogs/>},
-    {path: "monitoring", element: <MonitoringPage/>},
-    {path: "security-alerts", element: <SecurityAlertsPage/>},
-    {path: "audit-reports", element: <AuditReportsPage/>},
-    {path: "usage-analytics", element: <UsageAnalyticsPage/>},
 ])
 
 export default router;
