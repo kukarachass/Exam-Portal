@@ -3,6 +3,7 @@ import AdminHeader from "../../../UI/Admin-Page-Ui/AdminHeader/AdminHeader.tsx";
 import ActivityBord from "../../../UI/Admin-Page-Ui/Activity-bord/ActivityBord.tsx";
 import ExamSessions from "../../../UI/Admin-Page-Ui/ExamSessions/ExamSessions.tsx";
 import ManageCards from "../../../UI/Admin-Page-Ui/ManageCards/ManageCards.tsx";
+import SystemMonitoringBlock from "../../../UI/Admin-Page-Ui/SystemMonitoringBlock/SystemMonitoringBlock.tsx";
 
 export default function AdminPage(){
     return(
@@ -21,6 +22,7 @@ export default function AdminPage(){
 
             <div className={styles.management}>
                 <ManageCards/>
+                <SystemMonitoringBlock/>
             </div>
 
             <div className={styles.logs}>

@@ -1,0 +1,77 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.title{
+    color: var(--text);
+}
+
+.blocksWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.block{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* базовая лёгкая тень */
+}
+
+.block:hover {
+    transform: translateY(-2px); /* лёгкий подъём */
+    box-shadow:
+            0 4px 12px rgba(0,0,0,0.08),
+            0 1px 30px rgba(0,0,0,0.04); /* мягкий рассеянный glow */
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .7rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.icon {
+    padding: 0.5rem; /* фиксированный padding, не меняется */
+    border-radius: .5rem;
+    transition: all 0.25s ease;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.element:hover {
+    background-color: var(--text);
+    color: white;
+    transform: scale(1.03); /* слегка увеличиваем весь элемент */
+}
+
+.element:hover .icon {
+    background-color: white;
+    color: var(--text);
+    transform: scale(1.1); /* увеличиваем только иконку */
+}
+
