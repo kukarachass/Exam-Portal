@@ -75,3 +75,10 @@
     transform: scale(1.1); /* увеличиваем только иконку */
 }
 
+@media (max-width: 580px) {
+    .blocksWrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}
+

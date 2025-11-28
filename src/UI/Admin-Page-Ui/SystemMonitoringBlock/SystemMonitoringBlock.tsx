@@ -1,4 +1,5 @@
 import styles from "./SystemMonitoringBlock.module.css"
+import {Link} from "react-router-dom";
 
 export default function SystemMonitoringBlock(){
     return(
@@ -10,20 +11,26 @@ export default function SystemMonitoringBlock(){
                     </div>
 
                     <div className={styles.content}>
-                        <div className={styles.element}>
-                            <img className={styles.icon} src="/icons/System-monitoring-icons/view.svg" alt=""/>
-                            <span>View System Logs</span>
-                        </div>
+                        <Link to="view-systemLogs">
+                            <div className={styles.element}>
+                                <img className={styles.icon} src="/icons/System-monitoring-icons/view.svg" alt=""/>
+                                <span>View System Logs</span>
+                            </div>
+                        </Link>
 
-                        <div className={styles.element}>
-                            <img className={styles.icon} src="/icons/System-monitoring-icons/monitoring.svg" alt=""/>
-                            <span>Real-Time Monitoring</span>
-                        </div>
+                        <Link to="monitoring">
+                            <div className={styles.element}>
+                                <img className={styles.icon} src="/icons/System-monitoring-icons/monitoring.svg" alt=""/>
+                                <span>Real-Time Monitoring</span>
+                            </div>
+                        </Link>
 
-                        <div className={styles.element}>
-                            <img className={styles.icon} src="/icons/System-monitoring-icons/alerts.svg" alt=""/>
-                            <span>Security Alerts</span>
-                        </div>
+                        <Link to="security-alerts">
+                            <div className={styles.element}>
+                                <img className={styles.icon} src="/icons/System-monitoring-icons/alerts.svg" alt=""/>
+                                <span>Security Alerts</span>
+                            </div>
+                        </Link>
                     </div>
                 </div>
 
@@ -33,20 +40,26 @@ export default function SystemMonitoringBlock(){
                     </div>
 
                     <div className={styles.content}>
-                        <div className={styles.element}>
-                            <img className={styles.icon} src="/icons/System-monitoring-icons/audit.svg" alt=""/>
-                            <span>Audit Reports</span>
-                        </div>
+                        <Link to="audit-reports">
+                            <div className={styles.element}>
+                                <img className={styles.icon} src="/icons/System-monitoring-icons/audit.svg" alt=""/>
+                                <span>Audit Reports</span>
+                            </div>
+                        </Link>
 
-                        <div className={styles.element}>
-                            <img className={styles.icon} src="/icons/System-monitoring-icons/analytics.svg" alt=""/>
-                            <span>Usage Analytics</span>
-                        </div>
+                        <Link to="usage-analytics">
+                            <div className={styles.element}>
+                                <img className={styles.icon} src="/icons/System-monitoring-icons/analytics.svg" alt=""/>
+                                <span>Usage Analytics</span>
+                            </div>
+                        </Link>
 
-                        <div className={styles.element}>
-                            <img className={styles.icon} src="/icons/System-monitoring-icons/userMange.svg" alt=""/>
-                            <span>User Management</span>
-                        </div>
+                        <Link to="manage-users">
+                            <div className={styles.element}>
+                                <img className={styles.icon} src="/icons/System-monitoring-icons/userMange.svg" alt=""/>
+                                <span>User Management</span>
+                            </div>
+                        </Link>
                     </div>
                 </div>
 
